@@ -1,10 +1,16 @@
-﻿using CompetitionTask.Utilities;
+﻿using BenchmarkDotNet.Environments;
+using CompetitionTask.Utilities;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using AutoIt;
+
+
 
 namespace CompetitionTask.Pages
 {
@@ -39,6 +45,7 @@ namespace CompetitionTask.Pages
             IWebElement SelectTag = driver.FindElement(By.XPath("//*[@id=\"service-listing-section\"]/div[2]/div/form/div[4]/div[2]/div[1]/div/div/div/input"));
             SelectTag.SendKeys("java");
             SelectTag.SendKeys(Keys.Enter);
+           
 
             IWebElement ServiceType = driver.FindElement(By.XPath("//*[@id=\"service-listing-section\"]/div[2]/div/form/div[5]/div[2]/div[1]/div[1]/div/input"));
             ServiceType.Click();
@@ -64,9 +71,23 @@ namespace CompetitionTask.Pages
             IWebElement Creditvalue = driver.FindElement(By.XPath("//*[@id=\"service-listing-section\"]/div[2]/div/form/div[8]/div[4]/div/div/input"));
             Creditvalue.SendKeys("5");
 
+            Thread.Sleep(1000);
+            IWebElement selectfile = driver.FindElement(By.XPath("//*[@id=\"service-listing-section\"]/div[2]/div/form/div[9]/div/div[2]/section/div/label/div/span/i"));
+            selectfile.Click();
+            Thread.Sleep(1000);
+            Process.Start("\"C:\\Users\\64210\\Documents\\fileupload.exe\"");
+          //Runtime.getRuntime().exec("C:\\Users\\64210\\Documents\\fileupload.au3");
+
+        //"C:\Users\64210\Documents\fileupload.exe"
+
+            Thread.Sleep(3000);
+
+           
+        
+
             IWebElement ActiveBotton = driver.FindElement(By.XPath("//*[@id=\"service-listing-section\"]/div[2]/div/form/div[10]/div[2]/div/div[1]/div/input"));
             ActiveBotton.Click();
-
+            Thread.Sleep(1000);
             IWebElement SaveBotton = driver.FindElement(By.XPath("//*[@id=\"service-listing-section\"]/div[2]/div/form/div[11]/div/input[1]"));
             SaveBotton.Click();
            
