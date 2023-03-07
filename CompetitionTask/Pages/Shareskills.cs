@@ -20,6 +20,7 @@ namespace CompetitionTask.Pages
         {
             //Click share skills and add details
 
+
            
             IWebElement Shareskills = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[1]/div/div[2]/a"));
             Shareskills.Click();
