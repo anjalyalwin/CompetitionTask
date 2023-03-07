@@ -41,6 +41,7 @@ namespace CompetitionTask.Pages
             Wait.WaitforElementTobeclickable(driver, "Xpath", "/html/body/div[2]/div/div[3]/button[2]", 5);
             IWebElement deleteyes = driver.FindElement(By.XPath("/html/body/div[2]/div/div[3]/button[2]"));
             deleteyes.Click();
+            driver.Quit();
           
 
         }
