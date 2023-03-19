@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using CompetitionTask.Utilities;
+using OpenQA.Selenium.DevTools.V108.Network;
 
 
-        // Open Chrome browser
-        IWebDriver driver = new ChromeDriver();
+// Open Chrome browser
+IWebDriver driver = new ChromeDriver();
 
         // login page object Intialization and defintion
         LoginPage loginpageObj = new LoginPage();
@@ -29,8 +30,6 @@ using CompetitionTask.Utilities;
        
         MangageListingObj.Delete(driver);
    
-
-
 
 
 

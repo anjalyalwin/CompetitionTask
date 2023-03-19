@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CompetitionTask.Utilities;
+using NUnit.Framework.Internal;
 
 namespace CompetitionTask.Pages
 {
@@ -47,7 +48,7 @@ namespace CompetitionTask.Pages
             {
                 Console.WriteLine("Login failed , test failed");
             }
-
+          
         }
     }
 }
