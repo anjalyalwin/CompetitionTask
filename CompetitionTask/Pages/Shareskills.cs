@@ -75,11 +75,11 @@ namespace CompetitionTask.Pages
             Wait.WaitforElementTobeclickable(driver, "Xpath", "//*[@id=\"service-listing-section\"]/div[2]/div/form/div[9]/div/div[2]/section/div/label/div/span/i", 5);
             IWebElement selectfile = driver.FindElement(By.XPath("//*[@id=\"service-listing-section\"]/div[2]/div/form/div[9]/div/div[2]/section/div/label/div/span/i"));
             selectfile.Click();
-            //Thread.Sleep(1000);
+            Thread.Sleep(1000);
             Process.Start("\"C:\\Users\\64210\\Documents\\fileupload.exe\"");
            
-           
-             IWebElement ActiveBotton = driver.FindElement(By.XPath("//*[@id=\"service-listing-section\"]/div[2]/div/form/div[10]/div[2]/div/div[1]/div/input"));
+
+            IWebElement ActiveBotton = driver.FindElement(By.XPath("//*[@id=\"service-listing-section\"]/div[2]/div/form/div[10]/div[2]/div/div[1]/div/input"));
             ActiveBotton.Click();
            
             Wait.WaitforElementTobeclickable(driver, "Xpath", "//*[@id=\"service-listing-section\"]/div[2]/div/form/div[11]/div/input[1]", 9);

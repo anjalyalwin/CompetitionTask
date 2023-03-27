@@ -35,23 +35,13 @@ namespace CompetitionTask
             // login page object Intialization and defintion
             LoginPage loginpageObj = new LoginPage();
             loginpageObj.LoginActions(driver);
-
-
-        }
-        [Test]
-        public void login()
-        {
-
-
-
-            IWebDriver driver = new ChromeDriver();
-
             //shareskills object intialization and defintion
             Shareskills ShareskillsObj = new Shareskills();
             ShareskillsObj.Gotomanagelisting(driver);
-            
 
         }
+            
+            
 
         [Test]
         public void edit1()
