@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CompetitionTask.Utilities;
 using NUnit.Framework.Internal;
+using Microsoft.Diagnostics.Runtime.DacInterface;
 
 namespace CompetitionTask.Pages
 {
@@ -23,6 +24,7 @@ namespace CompetitionTask.Pages
             //Chick on Signin Botton
             IWebElement SigninBotton = driver.FindElement(By.XPath("//*[@id=\"home\"]/div/div/div[1]/div/a"));
             SigninBotton.Click();
+
 
             //Identify username textbox and enter valid username
             IWebElement UserNameTextBox = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[1]/input"));
@@ -42,13 +44,15 @@ namespace CompetitionTask.Pages
 
             if (HiAnjaly.Text == "Hi Anjaly")
             {
-                Console.WriteLine("Logged in successfully, test passed");
+               Console.WriteLine("Logged in successfully, test passed");
+               
             }
             else
             {
                 Console.WriteLine("Login failed , test failed");
             }
-          
+            
+        
         }
     }
 }
